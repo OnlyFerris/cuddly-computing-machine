@@ -57,6 +57,8 @@ pub fn rotate_3x3(m: &mut [u64; 9]) {
     m.swap(3, 7);
 }
 
-// TODO: 4 * 4
+pub fn rotate_4x4(_m: &mut [u64; 16]) {
+    // TODO: Implement
+}
 
 // TODO: Arbitrary n*n
