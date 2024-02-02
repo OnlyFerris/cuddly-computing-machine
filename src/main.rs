@@ -5,9 +5,9 @@
 #![feature(panic_unwind)]
 
 #[cfg(not(test))]
-extern crate unwind;
-#[cfg(not(test))]
 extern crate libc;
+#[cfg(not(test))]
+extern crate unwind;
 
 #[cfg(test)]
 use core::ffi::c_char;
