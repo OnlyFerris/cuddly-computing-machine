@@ -16,11 +16,13 @@ use cuddly_computing_machine::m_1628;
 // Entry point for this program.
 #[no_mangle] // ensure that this symbol is included in the output as `main`
 extern "C" fn main(_argc: c_int, _argv: *const *const c_char) -> c_int {
-    let a = &mut [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+    //let m = &mut [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+    // TODO: Reinterpret nested array above as contiguous. If possible.
+    let m = &mut [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-    m_1628::rotate(a);
+    m_1628::rotate_3x3(m);
 
-    if a == &[[7, 4, 1], [8, 5, 2], [9, 6, 3]] {
+    if m == &[7, 4, 1, 8, 5, 2, 9, 6, 3] {
         0
     } else {
         1
