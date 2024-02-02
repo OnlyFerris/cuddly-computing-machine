@@ -1,5 +1,13 @@
 # cuddly-computing-machine
 
+The cuddliest computing machine in the world, ever!
+
+## Run it
+
+```zsh
+cargo run
+```
+
 ## Resources
 
 1. https://docs.rust-embedded.org/book/intro/no-std.html
