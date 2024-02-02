@@ -57,6 +57,17 @@ pub fn rotate_3x3(m: &mut [u64; 9]) {
     m.swap(3, 7);
 }
 
+#[test]
+fn rotates_3x3_as_expected() {
+    let m = &mut [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    rotate_3x3(m);
+
+    let x = &[7, 4, 1, 8, 5, 2, 9, 6, 3];
+
+    assert_eq!(m, x);
+}
+
 pub fn rotate_4x4(_m: &mut [u64; 16]) {
     // TODO: Implement
 }
