@@ -17,6 +17,10 @@ jobs:
     steps:
     - name: nightly
       run: rustup default nightly
+    - name: add rustfmt
+      run: rustup component add rustfmt
+    - name: add clippy
+      run: rustup component add clippy
     - uses: actions/checkout@v3
     - name: Build
       run: cargo build --verbose
